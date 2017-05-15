@@ -1,0 +1,5 @@
+name: Messenger
+type: module
+description: 'Messenger module'
+package: Custom
+core: 8.x

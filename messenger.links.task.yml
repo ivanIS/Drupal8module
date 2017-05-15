@@ -1,0 +1,4 @@
+all_user.mainPage:
+  route_name: all_user.mainPage
+  base_route: entity.user.canonical
+  title: Messages

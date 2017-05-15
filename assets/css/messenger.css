@@ -1,0 +1,111 @@
+.tab1 td {
+    text-align: center;
+}
+
+.tab .s0 {
+    background: rgba(255, 0, 0, 0.7);
+}
+
+.s1 {
+    background-color: white;
+}
+
+.tab1 th {
+    background-color: white;
+    color: black;
+    text-align: center;
+}
+
+.tab td {
+    background-color: white;
+    color: black;
+    text-align: center;
+}
+
+.tab th {
+    background-color: white;
+    color: black;
+    text-align: center;
+}
+
+.tab1 tr {
+    background-color: white;
+    color: black;
+}
+
+.tab1 a {
+    color: #2C3E50;
+    text-decoration: none;
+    border-bottom: none;
+    font-size: 15px;
+}
+
+.tab1 td a:hover {
+    color: #00e676;
+    text-decoration: underline;
+}
+
+.tab1 a:visited {
+    color: #2C3E50;
+    text-decoration: none;
+    border-bottom: none;
+    font-size: 15px;
+}
+
+#mesConteiner{
+    width: 130px;
+    height: 100px;
+    background: url("../img/convert.png");
+    background-repeat: no-repeat;
+}
+
+#mesConteiner:hover{
+    width: 130px;
+    height: 100px;
+    background: url("../img/convert_opened.png");
+    background-repeat: no-repeat;
+}
+
+#mesConteiner a {
+    display: block;
+    width: 130px;
+    height: 100px;
+    background-color: transparent;
+    border: none;
+}
+
+#countMessage{
+    width: 40px;
+    height: 40px;
+    border-radius: 25px;
+    border: 2px solid #9EC22C;
+    background-color: tomato;
+    text-align: center;
+    position: relative;
+    margin-left: 110px;
+    margin-top: -105px;
+}
+
+#countMessage p {
+    font-size: 1.4em;
+    color: white;
+    padding-top: 7px;
+}
+
+.mess-tabl tbody tr th,td {
+
+    text-align: center;
+}
+
+.mess-tabl td {
+    text-align: center;
+}
+
+td.colMess {
+    text-align: left;
+}
+
+td.colMessBold {
+    font-weight: 700;
+    text-align: left;
+}

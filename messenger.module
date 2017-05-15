@@ -1,0 +1,17 @@
+<?php
+
+/**
+ * Implements hook_mail().
+ */
+function messenger_mail($key, &$message, $params) {
+    $options = array(
+        'langcode' => $message['langcode'],
+        );
+    switch ($key) {
+      case 'notice':
+        $message['from'] = \Drupal::config('system.site')->get('mail');
+        $message['subject'] = t('@title', array('@title' => $params['title']), $options);
+        $message['body'][] = $params['message'];
+        break;
+    }
+}

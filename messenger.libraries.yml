@@ -1,0 +1,12 @@
+messenger.base:
+  version: VERSION
+  css:
+    layout:
+      assets/css/messenger.css: {}
+  js:
+    assets/js/message_read.js: {}
+
+  dependencies:
+    - core/jquery
+    - core/drupal
+    - core/jquery.once

@@ -1,0 +1,56 @@
+<?php
+
+/**
+ * @file
+ * Installation file for the Messenger module.
+ */
+
+/**
+ * Implements hook_schema().
+ */
+function messenger_schema() {
+    $schema = array();
+
+    $schema['messenger_msg'] = array(
+        'fields' => array(
+            'message_id' => array(
+                'type' => 'serial',
+                'not null' => TRUE,
+                'description' => 'ID of chat message.',
+            ),
+            'sender_id' => array(
+                'description' => 'Uid of the sender.',
+                'type' => 'varchar',
+                'length' => 32,
+                'not null' => TRUE,
+            ),
+            'receiver_id' => array(
+                'description' => 'Uid of the receiver.',
+                'type' => 'varchar',
+                'length' => 32,
+                'not null' => TRUE,
+            ),
+            'message' => array(
+                'type' => 'text',
+                'size' => 'big',
+                'not null' => TRUE,
+                'description' => 'Chat message.',
+            ),
+            'time' => array(
+                'description' => 'The time when the message was created.',
+                'mysql_type' => 'DATETIME',
+                'not null' => TRUE,
+            ),
+            'status' => array(
+                'description' => 'The status when the message was created.',
+                'type' => 'int',
+                'not null' => TRUE,
+                'unsigned' => TRUE,
+                'default' => 0
+            ),
+        ),
+        'primary key' => array('message_id'),
+    );
+    return $schema;
+}
+

@@ -1,0 +1,52 @@
+messEnger_all_user.mor:
+ path: '/dk801lpk/messenger/mor'
+ defaults:
+   _title: 'Messenger form'
+   _form: '\Drupal\messenger\Form\MessengerForm'
+ requirements:
+   _permission: 'access content'
+
+messenger_user.mor:
+ path: '/sf413ptr/messenger/mor/user'
+ defaults:
+   _title: 'Messenger user form'
+   _form: '\Drupal\messenger\Form\MessengerUserForm'
+ requirements:
+    _permission: 'access content'
+
+all_user.mainPage:
+  path: '/user/{user}/messages'
+  defaults:
+    _controller: '\Drupal\messenger\Controller\MessengerController::allUser'
+    _title: 'All messages page'
+  requirements:
+    _permission: 'access content'
+
+one_user.page:
+  path: '/user/{user}/messages/{other_user}'
+  defaults:
+    _controller: '\Drupal\messenger\Controller\MessengerUserController::oneUser'
+    _title: 'One user messages'
+  requirements:
+    _permission: 'access content'
+
+javascript.response:
+  path: '/056qht17'
+  defaults:
+    _controller: '\Drupal\messenger\Controller\MessengerClassController::jsResponse'
+  requirements:
+    _permission: 'access content'
+
+messages_ajax.mainPage:
+  path: '/088qbt37'
+  defaults:
+    _controller: '\Drupal\messenger\Controller\AjaxController::messagesResponse'
+  requirements:
+    _permission: 'access content'
+
+user_ajax.page:
+  path: '/147qxt87'
+  defaults:
+    _controller: '\Drupal\messenger\Controller\AjaxUserController::userResponse'
+  requirements:
+    _permission: 'access content'
